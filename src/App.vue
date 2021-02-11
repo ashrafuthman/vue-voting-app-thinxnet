@@ -70,7 +70,7 @@
         <v-footer class='orange darken-4 white--text'>
             <v-layout justify-space-around>
                 <span>Created by ashrafuthman</span>
-                <span><a href='https://github.com/ashrafuthman/vue-voting-app' target='_blank'>Code on Github</a></span>
+                <span><a href='https://github.com/ashrafuthman/vue-voting-app-thinxnet' target='_blank'>Code on Github</a></span>
             </v-layout>
         </v-footer>
     </v-app>
