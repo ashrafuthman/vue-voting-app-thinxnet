@@ -10,7 +10,7 @@ npm run dev
 ```
 * I Could not work more on it since I am super busy with my current job and I already have a deadline with this task
 
-A lot of things could be imporved and I know how to improve them since I already have experiece with that.
+A lot of things could be improved and I know how to improve them since I already have experiece with that.
 For example:
 - Access the store with mapgetters and mapactions
 - VueX can be replaced with Composition API in this scenario
