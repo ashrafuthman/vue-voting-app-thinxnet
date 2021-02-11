@@ -84,7 +84,7 @@ export default {
           right: null,
           left: null,
           username: null,
-          dialog: false,
+          dialog: true,
         }
     },
     methods: {
