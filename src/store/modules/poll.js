@@ -1,5 +1,5 @@
 import axios from 'axios';
-const server = 'http://localhost:3000';
+const server = 'https://poll-api-2.herokuapp.com';
 
 
 export default {
