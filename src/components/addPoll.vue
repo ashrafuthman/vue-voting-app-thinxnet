@@ -3,69 +3,69 @@
         <v-layout column>
             <v-flex xs6 offset-xs3>
                 <v-card>
-                <v-card-title>
-                    <v-flex>
-                        <h3>Add a Poll</h3>
-                    </v-flex>
-                </v-card-title>
-                <v-card-text>
-                    <v-container>
-                        <v-form>
-                            <v-layout>
-                                <v-flex>
-                                    <h4>Enter a poll question:</h4>
-                                    <v-text-field
-                                    v-model='question'
-                                    name='question'
-                                    type='text'
-                                    label='Enter question here'
-                                    required>
-                                    </v-text-field>
-                                </v-flex>
-                            </v-layout>
-                            <v-layout column>
-                                <v-flex>
-                                    <h4>Enter the options</h4>
-                                    <v-text-field
-                                    v-model='options[0]'
-                                    type='text'
-                                    label='Options format: Option, description, address.'
-                                    required>
-                                    </v-text-field>
-                                    <v-text-field
-                                    v-model='options[1]'
-                                    type='text'
-                                    label='Options format: Option, description, address.'
-                                    required>
-                                    </v-text-field>
-                                </v-flex>
-                                <v-flex v-for='(extraChoice, idx) in moreoptions' :key='idx'>
-                                    <v-text-field
-                                    v-model='moreoptions[idx]'
-                                    type='text'
-                                    label='Bonus option'>                                        
-                                    </v-text-field>
-                                </v-flex>
-                                <v-flex>
-                                    <v-text-field
-                                    v-model='choice'
-                                    type='text'
-                                    label='Bonus option'>                                        
-                                    </v-text-field>
-                                    <v-btn @click='addOption'>Add Bonus Option</v-btn>
-                                    <v-btn @click='deleteOptions'>Delete Bonus Options</v-btn>
-                                </v-flex> 
-                                <v-flex>
-                                    <v-btn @click='addPoll'>Submit Poll</v-btn>
-                                </v-flex>                                   
-                            </v-layout>
-                        </v-form>
-                        <div v-if='error'>
-                            <p style="color: red;">{{ error }}</p>
-                        </div>
-                    </v-container>
-                </v-card-text>
-            </v-card>
+                    <v-card-title>
+                        <v-flex>
+                            <h5 class="card-title">Add a Poll</h5>
+                        </v-flex>
+                    </v-card-title>
+                    <v-card-text>
+                        <v-container>
+                            <v-form>
+                                <v-layout>
+                                    <v-flex>
+                                        <h6>Enter a poll question:</h6>
+                                        <v-text-field
+                                        v-model='question'
+                                        name='question'
+                                        type='text'
+                                        label='Enter question here'
+                                        required>
+                                        </v-text-field>
+                                    </v-flex>
+                                </v-layout>
+                                <v-layout column>
+                                    <v-flex>
+                                        <h6>Enter the options</h6>
+                                        <v-text-field
+                                        v-model='options[0]'
+                                        type='text'
+                                        label='Options format: Option, description, address.'
+                                        required>
+                                        </v-text-field>
+                                        <v-text-field
+                                        v-model='options[1]'
+                                        type='text'
+                                        label='Options format: Option, description, address.'
+                                        required>
+                                        </v-text-field>
+                                    </v-flex>
+                                    <v-flex v-for='(extraChoice, idx) in moreoptions' :key='idx'>
+                                        <v-text-field
+                                        v-model='moreoptions[idx]'
+                                        type='text'
+                                        label='Bonus option'>                                        
+                                        </v-text-field>
+                                    </v-flex>
+                                    <v-flex>
+                                        <v-text-field
+                                        v-model='choice'
+                                        type='text'
+                                        label='Bonus option'>                                        
+                                        </v-text-field>
+                                        <v-btn @click='addOption'>Add Bonus Option</v-btn>
+                                        <v-btn @click='deleteOptions'>Delete Bonus Options</v-btn>
+                                    </v-flex> 
+                                    <v-flex>
+                                        <v-btn @click='addPoll'>Submit Poll</v-btn>
+                                    </v-flex>                                   
+                                </v-layout>
+                            </v-form>
+                            <div v-if='error'>
+                                <p style="color: red;">{{ error }}</p>
+                            </div>
+                        </v-container>
+                    </v-card-text>
+                </v-card>
             </v-flex>                
         </v-layout>
     </div>
@@ -123,4 +123,16 @@ export default {
     }
 }
 </script>
-
+<style scoped>
+@media only screen and (max-width: 600px) {
+    .card {
+        min-width: 200%;
+        position: relative;
+        right: 50%;
+    }
+    .card-title {
+        position: relative;
+        top: 50px;
+    }
+}
+</style>
