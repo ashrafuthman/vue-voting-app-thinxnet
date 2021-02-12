@@ -25,20 +25,12 @@
                     </v-card-title>
                     <v-card-text>
                     <v-container>
-                        <v-row>
-                        <v-col
-                            cols="12"
-                            sm="6"
-                            md="4"
-                        >
-                            <v-text-field
+                        <v-text-field
 
-                            label="Name"
-                            v-model="username"
-                            required
-                            />
-                        </v-col>                                                            
-                        </v-row>
+                        label="Name"
+                        v-model="username"
+                        required
+                        />
                     </v-container>
                     <small>*indicates required field</small>
                     </v-card-text>
@@ -90,7 +82,7 @@ export default {
     methods: {
         async saveUsername() {
             await this.$store.dispatch('setUser', this.username);
-            this.$router.push('/polls');
+            this.$router.push("/polls").catch(()=>{});
             this.dialog = false;
         }
     }

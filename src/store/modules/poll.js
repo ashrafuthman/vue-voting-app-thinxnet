@@ -55,6 +55,15 @@ export default {
         },
         updateAnswer: async ({commit}, data) => {
             await axios.post(server + '/answers', data);
+        },
+        removeAnswer: async ({commit}, data) => {
+            await axios.delete(server + `/answers/${data.answer_id}`, data);
+        },
+        removeOption: async ({commit}, data) => {
+            await axios.delete(server + `/options/${data.option_id}`, data);
+        },
+        resetPoll: async ({commit}, data) => {
+            await axios.patch(server + `/polls/${data.poll_id}`, data);
         }
     },
     getters: {

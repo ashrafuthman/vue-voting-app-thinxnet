@@ -4,7 +4,7 @@
             <v-flex xs6 offset-xs3>
                 <h3>Polls</h3>
                 <v-list subheader>
-                    <div v-for='(poll, idx) in polls' :key='idx'>
+                    <div class="list-item-container" v-for='(poll, idx) in polls' :key='idx'>
                         <v-divider></v-divider>
                         <v-list-tile>
                             <v-list-tile-content class='list-item' @click='setPoll(poll)'>
@@ -43,11 +43,21 @@ export default {
     height: 75vh;
     display: flex;
     align-content: flex-start;
+        min-width: 300px;
 }
 
 .list-item {
     cursor: pointer;
+    min-width: 300px;
 }
-
+.list-item-container {
+    min-width: 300px;
+}
+@media only screen and (max-width: 600px) {
+.list-item-container {
+    position: relative;
+    right: 50%;
+}
+}
 </style>
 
