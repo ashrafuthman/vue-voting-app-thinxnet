@@ -16,4 +16,3 @@ For example:
 
 * When it comes to unvote, it should work when you attempt to vote and unvote one time only because the API that I created does not behave correctly on Heroku so it is not frontend issue but backend.
 
-Hope I will be able to pass!
